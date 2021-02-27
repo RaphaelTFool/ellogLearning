@@ -1,3 +1,5 @@
+execute_process(COMMAND cp ${CMAKE_CURRENT_SOURCE_DIR}/default.conf ${EXECUTABLE_OUTPUT_PATH}/)
+
 aux_source_directory(. TEST_SRC_LIST)
 foreach(TEST_SRC ${TEST_SRC_LIST})
     STRING(REGEX REPLACE "^\\./|\\.c[a-zA-Z0-9_]*$" "" TEST_EXE_NAME ${TEST_SRC})
